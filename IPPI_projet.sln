@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPPI_projet", "IPPI_projet.csproj", "{7D79A932-472F-41C1-AA2A-7495B8DEC090}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D79A932-472F-41C1-AA2A-7495B8DEC090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D79A932-472F-41C1-AA2A-7495B8DEC090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D79A932-472F-41C1-AA2A-7495B8DEC090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D79A932-472F-41C1-AA2A-7495B8DEC090}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

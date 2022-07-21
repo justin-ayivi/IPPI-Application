@@ -1,0 +1,33 @@
+﻿<Window x:Class="IPPI_projet.SupForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="SupForm" Height="500" Width="900" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Grid MouseDown="Border_MouseDown">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFE63070" Offset="1" />
+                <GradientStop Color="#FFFE8704" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Border Height="448" VerticalAlignment="Top" Background="#100E17" MouseDown="Border_MouseDown" Margin="0,10,0,0">
+        </Border>
+        <TextBlock Text="Gestion Superviseur" Margin="20,70,496,159" Foreground="White" TextAlignment="Center" FontSize="48" FontFamily="Brush Script MT"/>
+
+        <TextBox x:Name="txt_namesup" HorizontalAlignment="Left" Foreground="White" Height="35" Margin="112,232,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Nom superviseur" VerticalAlignment="Top" Width="193" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" FontSize="18"  />
+        <DataGrid x:Name="dg_listsup" HorizontalAlignment="Left" Margin="418,70,0,0" VerticalAlignment="Top" Height="388" Width="482" SelectionChanged="dg_listsup_SelectionChanged"/>
+        <Button x:Name="delete_btn" Content="Supprimer" HorizontalAlignment="Left" Margin="288,463,0,0" VerticalAlignment="Top" Width="105" Click="del_btnClick"/>
+        <Button x:Name="update_btn" Content="Modifier" HorizontalAlignment="Left" Margin="158,463,0,0" VerticalAlignment="Top" Width="97" Background="#FFF1862C" BorderBrush="{x:Null}" Click="update_btnClick" RenderTransformOrigin="0.454,1.125"/>
+        <Button x:Name="add_btn" Content="Ajouter" HorizontalAlignment="Left" Margin="31,463,0,0" VerticalAlignment="Top" Width="96" Background="#FF2FAA0A" BorderBrush="{x:Null}" Click="add_btnClick"/>
+        <TextBox x:Name="txt_sup" HorizontalAlignment="Left" Foreground="White" Height="35" Margin="112,168,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="id superviseur" VerticalAlignment="Top" Width="193" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448"  FontSize="18" />
+        <StackPanel Width="100" Margin="800,-9,0,193">
+            <Button Margin="22,20" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="{x:Null}"
+        		ToolTip="Close" x:Name="btnExit" Click="btnExit_Click" Height="52">
+                <materialDesign:PackIcon Kind="Close" Foreground="White" Width="30" Height="30" />
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

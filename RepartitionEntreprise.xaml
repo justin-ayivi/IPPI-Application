@@ -1,0 +1,37 @@
+﻿<Window x:Class="IPPI_projet.RepartitionEntreprise"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="RepartitionEntreprise" Height="500" Width="1000" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Grid MouseDown="Border_MouseDown">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFE63070" Offset="1" />
+                <GradientStop Color="#FFFE8704" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Border Height="422" VerticalAlignment="Top" CornerRadius="0 0 180 0" Background="#100E17" MouseDown="Border_MouseDown" Margin="0,22,0,0">
+        </Border>
+        <TextBlock Text="Fiche de Répartition" Margin="-25,40,541,383" Foreground="White" TextAlignment="Center" FontSize="48" FontFamily="Brush Script MT"/>
+        <ComboBox ItemsSource="{Binding}" Foreground="#FFD94448" x:Name="cb_supervisor" HorizontalAlignment="Left" Margin="190,147,0,0" VerticalAlignment="Top" Width="193"  FontSize="18" BorderBrush="White" SelectionChanged="cb_supervisor_SelectionChanged" >
+        </ComboBox>
+        <DataGrid x:Name="dg_listEnt" HorizontalAlignment="Left" Margin="474,117,0,0" VerticalAlignment="Top" Height="327" Width="526" RenderTransformOrigin="0.647,0.275" SelectionChanged="dg_listEnt_SelectionChanged"/>
+       <TextBox x:Name="txt_search" HorizontalAlignment="Left" Foreground="White" Height="35" Margin="536,59,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Rechercher par sigle " VerticalAlignment="Top" Width="193" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" FontSize="18"  />
+        <Label Content="Superviseur" Foreground="White"  HorizontalAlignment="Left" Margin="30,152,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Agent" Foreground="White"  HorizontalAlignment="Left" Margin="40,221,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox ItemsSource="{Binding}" x:Name="cb_agent" Foreground="#FFD94448" HorizontalAlignment="Left" Margin="190,217,0,0" VerticalAlignment="Top" Width="193"  FontSize="18" BorderBrush="White" SelectionChanged="cb_agent_SelectionChanged"  />
+        <Label Content="Entreprise" Foreground="white"  HorizontalAlignment="Left" Margin="30,297,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.393,3.062"/>
+        <TextBox x:Name="txt_nameCompany" Foreground="#FFD94448" HorizontalAlignment="Left" Height="35" Margin="190,297,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Entreprise choisie" VerticalAlignment="Top" Width="193" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" FontSize="18"  />
+        <Button x:Name="affect_btn" Content="Affecter" HorizontalAlignment="Left" Margin="173,431,0,0" VerticalAlignment="Top" Width="96" Background="#FF2FAA0A" BorderBrush="{x:Null}" Click="affect_btnClick"/>
+        <Button x:Name="search_btn" Content="Rechercher" HorizontalAlignment="Left" Margin="785,62,0,0" VerticalAlignment="Top" Width="110" Background="#FF2FAA0A" BorderBrush="{x:Null}" Click="search_btnClick" />
+        <StackPanel Width="100" Margin="900,10,0,162">
+            <Button Margin="22,20" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="{x:Null}"
+        		ToolTip="Close" x:Name="btnExit" Click="btnExit_Click">
+                <materialDesign:PackIcon Kind="Close" Foreground="White" Width="30" Height="30" />
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

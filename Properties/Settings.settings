@@ -1,0 +1,17 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="IPPI_projet.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TitreApplication" Type="System.String" Scope="User">
+      <Value Profile="(Default)">IPPI</Value>
+    </Setting>
+    <Setting Name="ChaineConnexion" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=JUSTRO\SQL_ITS4;Initial Catalog=DB_IPPI;User ID=sa;Password=its4_2021&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=JUSTRO\SQL_ITS4;Initial Catalog=DB_IPPI;User ID=sa;Password=its4_2021</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
